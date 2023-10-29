@@ -1,0 +1,73 @@
+#Nav {
+    background-color: #89e5f3d1;
+    height: 105px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#Nav div.container {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+#Nav div.container div.navbarTop {
+    height: 72px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+}
+
+#Nav div.container div.navbarTop div.logo {
+    width: 61px;
+    overflow: hidden;
+}
+
+#Nav div.container div.navbarTop div.logo img {
+    width: 100%;
+}
+
+#Nav div.container div.navbarTop div.company h2{
+    color: #e4c3e4;
+}
+
+#Nav div.container div.navbarTop div.userOptions {
+    display: flex;
+    font-size: 22px;
+    width: 80px;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+#Nav div.container div.navbarBottom {
+    height: 25px;
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+}
+
+#Nav div.container div.navbarBottom div {
+    width: 33.33%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 0px;
+    border-color: antiquewhite;
+    /* transition: border-bottom 0.3s ease-in-out; */
+    
+}
+
+#Nav div.container div.navbarBottom div:hover {
+    background-color: rgba(27, 25, 25, 0.108);
+    cursor: pointer;
+    border-bottom: 2px solid antiquewhite;
+
+}
+
+#Nav div.container div.navbarBottom div.sort {}
+
+#Nav div.container div.navbarBottom div.search {}
+
+#Nav div.container div.navbarBottom div.addNew {}

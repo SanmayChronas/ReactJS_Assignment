@@ -1,0 +1,253 @@
+#Home {
+    display: block;
+    /* width: 100%; */
+    min-height: 40vw;
+    max-height: 70vw;
+
+    margin-top: 30px;
+    padding: 15px;
+}
+
+#Home div.topOptions {
+    /* width: 80px; */
+    display: flex;
+    justify-content: end;
+    padding: 0px 0px 10px 0px;
+}
+
+#Home div.topOptions button {
+    border: none;
+    border-radius: 10px;
+    background-color: #a5a5a5;
+    width: 100px;
+    height: 30px;
+}
+
+#Home div.topOptions button:hover {
+    background-color: #20f4f4;
+}
+
+#Home div.container {
+    background-color: #3d39390f;
+    color: #000000c2;
+}
+
+#Home div.container div.headings {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+#Home div.container div.headings div.head {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Home div.container div.headings div.head p {
+    color: #7b7878;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#Home div.Editor {
+    height: 100%;
+    width: 100%;
+    background-color: #00000054;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000c2;
+}
+
+#Home div.Editor div.Container {
+    /* height: 352; */
+    width: 385px;
+    background-color: #20f4f4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 50px 0px; */
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#Home div.Editor div.Container div.topPart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Home div.Editor div.Container div.topPart div {
+    width: 50%;
+}
+
+#Home div.Editor div.Container div.topPart div.title {
+    text-align: center;
+}
+
+#Home div.Editor div.Container div.topPart div.cross {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 4%;
+    cursor: pointer;
+    position: relative;
+}
+
+#Home div.Editor div.Container div.topPart div.title h4 {
+    margin: 0;
+}
+
+#Home div.Editor div.Container div.topPart div.cross img {
+    width: 10%;
+    position: absolute;
+    top: 12px;
+}
+
+
+#Home div.Editor div.Container div.allFields div.fields {
+    width: 100%;
+    display: flex;
+    padding: 23px 0px;
+    /* justify-content: space-around; */
+    height: 30px;
+    flex-direction: column;
+    background-color: #f2f0f0;
+}
+
+#Home div.Editor div.Container div.allFields div.fields:last-child {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#Home div.Editor div.Container div.allFields div.fields:last-child button {
+    width: 20%;
+    background-color: #a5a5a5;
+    border: none;
+    height: 66%;
+    border-radius: 5px;
+}
+
+#Home div.Editor div.Container div.allFields div.fields:last-child button:hover {
+    background-color: #20f4f4;
+}
+
+#Home div.Editor div.Container div.allFields div.fields div.name {
+    display: flex;
+    justify-content: center;
+}
+
+#Home div.Editor div.Container div.allFields div.fields div.name p {
+    width: 95%;
+    margin-bottom: 5px;
+}
+
+
+#Home div.Editor div.Container div.allFields div.fields div.input {
+    display: flex;
+    justify-content: center;
+}
+
+#Home div.Editor div.Container div.allFields div.fields div.input input {
+    background-color: #d8d8d8;
+    border-radius: 5px;
+    width: 95%;
+    height: 30px;
+    /* border: 1px solid gray; */
+    color: #000000c2;
+    border: none;
+    font-size: 15px;
+}
+
+#Home div.Editor div.deleteContainer {
+    height: 125px;
+    width: 380px;
+    background-color: #20f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#Home div.Editor div.deleteContainer div.top {
+    width: 100%;
+    background-color: transparent;
+    height: 25%;
+}
+
+#Home div.Editor div.deleteContainer div.msgContainer {
+    width: 100%;
+    background-color: #f2f0f0;
+    height: 75%;
+}
+
+#Home div.Editor div.deleteContainer div.msgContainer div.middle {
+    width: 100%;
+    background-color: #f2f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Home div.Editor div.deleteContainer div.msgContainer div.bottom {
+    width: 100%;
+    background-color: #f2f0f0;
+    display: flex;
+    justify-content: space-evenly;
+    height: 50%;
+}
+
+#Home div.Editor div.deleteContainer div.msgContainer div.bottom button {
+    width: 20%;
+    height: 65%;
+    border: none;
+    border-radius: 5px;
+    background-color: #a5a5a5;
+}
+
+#Home div.Editor div.deleteContainer div.msgContainer div.bottom button.yes:hover {
+    background-color: #f96868;
+}
+
+#Home div.Editor div.deleteContainer div.msgContainer div.bottom button.no:hover {
+    background-color: #20f4f4;
+}
+
+#Home div.Editor div.deleteContainer div.top div.cross {
+    height: 100%;
+    position: relative;
+}
+
+#Home div.Editor div.deleteContainer div.top div.cross img {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    width: 4%;
+}
+
+#Home div.Editor div.deleteContainer div.top div.cross img:hover {
+    cursor: pointer;
+}
+
+#Home div.pagination{
+    display: flex;
+    justify-content: center;
+}
+#Home div.pagination span{
+    cursor: pointer;
+    font-size: 25px;
+    margin: 0px 5px 0px 5px;
+    color: #6a6b6b;
+    border-radius: 15px;
+}
+
+#Home div.pagination span.active{
+    /* background-color: #20f4f4; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}

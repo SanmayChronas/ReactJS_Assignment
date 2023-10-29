@@ -1,0 +1,37 @@
+div#DetailCard {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+div#DetailCard:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+div#DetailCard div {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div#DetailCard div p {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 5px;
+}
+
+div#DetailCard div img {
+    width: 35%;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+div#DetailCard div img:hover {
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    transform: scaleX(1.15) scaleY(1.15);
+}
