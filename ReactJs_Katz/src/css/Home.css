@@ -235,11 +235,12 @@
     cursor: pointer;
 }
 
-#Home div.pagination{
+#Home div.pagination {
     display: flex;
     justify-content: center;
 }
-#Home div.pagination span{
+
+#Home div.pagination span {
     cursor: pointer;
     font-size: 25px;
     margin: 0px 5px 0px 5px;
@@ -247,7 +248,35 @@
     border-radius: 15px;
 }
 
-#Home div.pagination span.active{
+#Home div.pagination span.active {
     /* background-color: #20f4f4; */
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #d2f5c1;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

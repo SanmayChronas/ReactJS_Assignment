@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
   const [allData, setAllData] = useState([])
+  const [holder, setHolder] = useState(<span className="loader"></span>);
   const [editorActive, setEditorActive] = useState(false)
   const [editingItem, setEditingItem] = useState({
     name: "",
@@ -31,7 +32,12 @@ function Home() {
   const [sortOrder, setSortOrder] = useState("asc")
   useEffect(() => {
 
-    fetch('http://universities.hipolabs.com/search?country=United+States').then(res => res.json()).then(json => {
+    fetch('http://universities.hipolabs.com/search?country=United+States').then(res => {
+      if (res.status !== 200) {
+        setHolder('No data found')
+      }
+      return res.json()
+    }).then(json => {
 
       setAllData(json.sort((a, b) => a.name.localeCompare(b.name)))
     })
@@ -75,7 +81,7 @@ function Home() {
       return "Enter Atleast 5 characters in university name"
     } else if (item.country.length < 3) {
       return "Enter Atleast 3 characters in country name"
-    }else if (!alphaWithSpacePattern.test(item.country)) {
+    } else if (!alphaWithSpacePattern.test(item.country)) {
       return "Enter only alphabets in country name"
     } else if (!urlRegex.test(item.web_pages[0])) {
       return "Enter a valid Website address"
@@ -112,7 +118,6 @@ function Home() {
       }
     } catch (error) {
       notify(error);
-      // Handle the validation error (e.g., display an error message to the user).
     }
 
   }
@@ -165,7 +170,6 @@ function Home() {
       }
     } catch (error) {
       notify(error);
-      // Handle the validation error (e.g., display an error message to the user).
     }
   }
 
@@ -184,19 +188,6 @@ function Home() {
 
   }
   const notify = (msg) => toast(msg);
-
-
-  // return (
-  //   <div id='Home'>
-  //     <div className="box">
-  //       <div>{count}</div>
-  //       <div className="buttons">
-  //         <div className="increment"><button className="increase" onClick={() => dispatch(increment())} id="increase">+</button></div>
-  //         <div className="decrement"><button className="decrease" onClick={() => dispatch(decrement())} id="decrease">-</button></div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // )
 
   return (
     <div id='Home'>
@@ -232,7 +223,7 @@ function Home() {
             <span className='next' onClick={() => activePage !== Math.ceil(allData.length / 10) && setActivePage((prev) => prev + 1)}>➡</span>
           </div>
         </div>
-        : <div>Loading</div>}
+        : <div className='centre'>{holder}</div>}
 
       <div className='Editor' style={{ display: editorActive ? "flex" : "none" }}>
         <div className="Container">

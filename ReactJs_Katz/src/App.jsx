@@ -11,7 +11,7 @@ function App() {
   const [bgColor, setBgColor] = useState("white");
   const colors = useSelector((state) => state.colors.colors);
   useEffect(() => {
-    console.log({colors});
+
     let index = localStorage.getItem("colorIndex")
     if (index) {
       let i = parseInt(index) + 1;
